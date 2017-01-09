@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic2 and AngularFire2
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-list>
+  <ion-item padding class="text" *ngFor="let user of users | async">
+    {{user.$key}}
+  </ion-item>
+</ion-list>
+
+<button ion-button outline (click)="signInWithGoogle()">Sign In With Google</button>
